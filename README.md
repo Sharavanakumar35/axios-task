@@ -1,8 +1,20 @@
-# React + Vite
+# Users Profile React Project Using Axios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application for managing user profiles. It allows users to view a list of user profiles, search for specific users, add new users, edit existing user profiles, and delete user profiles.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- View a list of user profiles
+- Search for users by name
+- Add new users
+- Edit existing user profiles
+- Delete user profiles
+
+## Technologies Used
+
+- React.js
+- Bootstrap
+- Axios (for API requests)
+- Context API (for state management)
+- [Mock API](https://mockapi.io/projects)https://mockapi.io/projects)
+

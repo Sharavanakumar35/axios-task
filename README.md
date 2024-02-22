@@ -16,5 +16,5 @@ This project is a React application for managing user profiles. It allows users 
 - Bootstrap
 - Axios (for API requests)
 - Context API (for state management)
-- [Mock API](mockapi.io)
+- [Mock API]([mockapi.io](https://mockapi.io/projects)https://mockapi.io/projects)
 

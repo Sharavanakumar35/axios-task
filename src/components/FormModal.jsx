@@ -108,9 +108,6 @@ const FormModal = ({ isAddUser, editUserDetails }) => {
               Please provide an email.
             </Form.Control.Feedback>
           </Form.Group>
-        </Row>
-        {/* Add other form groups for other fields */}
-        <Row className="mb-3">
           <Form.Group as={Col} md="6" controlId="phone">
             <Form.Label>Phone</Form.Label>
             <Form.Control
@@ -124,21 +121,8 @@ const FormModal = ({ isAddUser, editUserDetails }) => {
               Please provide a phone number.
             </Form.Control.Feedback>
           </Form.Group>
-          <Form.Group as={Col} md="6" controlId="website">
-            <Form.Label>Website</Form.Label>
-            <Form.Control
-              type="text"
-              name="website"
-              value={formData.website}
-              onChange={handleChange}
-              required
-            />
-            <Form.Control.Feedback type="invalid">
-              Please provide a website.
-            </Form.Control.Feedback>
-          </Form.Group>
         </Row>
-
+        {/* Add other form groups for other fields */}
         <Row className="mb-3">
           <Form.Group as={Col} md="4" controlId="street">
             <Form.Label>Street</Form.Label>
@@ -223,6 +207,19 @@ const FormModal = ({ isAddUser, editUserDetails }) => {
             />
             <Form.Control.Feedback type="invalid">
               Please provide business details.
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group as={Col} md="6" controlId="website">
+            <Form.Label>Website</Form.Label>
+            <Form.Control
+              type="text"
+              name="website"
+              value={formData.website}
+              onChange={handleChange}
+              required
+            />
+            <Form.Control.Feedback type="invalid">
+              Please provide a website.
             </Form.Control.Feedback>
           </Form.Group>
         </Row>

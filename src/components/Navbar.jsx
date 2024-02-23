@@ -40,6 +40,15 @@ function NavBar() {
     }, [setHandleSearchChangeFn]);
 
   
+    const onClose = () => {
+      console.log('onClose called');
+      setShow(false);
+    }
+
+    const sample = () => {
+      console.log('sample called');
+    }
+    const onOpen = () => { setShow(true) }
     
 
   return (
@@ -55,12 +64,12 @@ function NavBar() {
           >
           <DropdownSearchBox searchTerm={handleSearchChange} handleSearchChange={handleSearchChange}></DropdownSearchBox>
           </Nav>
-          <Button className='me-4' onClick={() => setShow(true)}>
+          <Button className='me-4' onClick={onOpen}>
             Add User
           </Button>
           <Modal
             show={show}
-            onHide={() => setShow(false)}
+            onHide={onClose}
             dialogClassName="modal-90w"
             aria-labelledby="example-custom-modal-styling-title"
           >
@@ -70,7 +79,7 @@ function NavBar() {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-            <FormModal isAddUser={true} editUserDetails={{}}></FormModal>
+            <FormModal isAddUser={true} editUserDetails={{}} onClose={onClose}></FormModal>
             </Modal.Body>
           </Modal>
           

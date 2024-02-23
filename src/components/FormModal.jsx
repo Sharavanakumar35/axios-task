@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Form, Row, Col, InputGroup, Button } from "react-bootstrap"; // Import Form, Row, Col, InputGroup, and Button from react-bootstrap
 import { useUsers } from "../context-api/UsersContext";
 
-const FormModal = ({ isAddUser, editUserDetails }) => {
+const FormModal = ({ isAddUser, editUserDetails, onClose}) => {
 
   const formStructure = {
     name: "",
@@ -25,7 +25,7 @@ const FormModal = ({ isAddUser, editUserDetails }) => {
       setFormData(editUserDetails);
     }
   }, [isAddUser, editUserDetails]);
-  
+
 
   const { addUser, editUser } = useUsers();
 
@@ -50,14 +50,15 @@ const FormModal = ({ isAddUser, editUserDetails }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
+    onClose;
     if (form.checkValidity() === false) {
-      event.stopPropagation();
+        event.stopPropagation();
+        setValidated(true);
+    } else {
+        isAddUser ? addUser(formData) : editUser(editUserDetails.id, formData);
     }
-    setValidated(true);
-
-    console.log("Form data:", formData);
-    isAddUser ? addUser(formData) : editUser(editUserDetails.id, formData);
   };
+
 
   return (
     <>
